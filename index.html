@@ -109,7 +109,7 @@ h2{color:#00e5ff;margin-top:0}
   margin-top:8px;
 }
 
-/* LINKS */
+/* PORTFOLIO & CONTACT */
 .links a{
   display:block;
   color:#00e5ff;
@@ -259,7 +259,7 @@ Human-driven vulnerability assessment and penetration testing.
 <div class="review-box" id="reviewBox"></div>
 
 <script>
-const reviews=[
+const reviews=[ 
  {name:"Andrew Miller",country:"USA",text:"Professional penetration testing with real impact."},
  {name:"Liam O'Connor",country:"UK",text:"Clear reporting and serious security expertise."},
  {name:"Jonas Weber",country:"Germany",text:"Excellent vulnerability assessment. Highly trusted."},
@@ -268,10 +268,10 @@ const reviews=[
 let i=0;
 function showReview(){
  const r=reviews[i];
- document.getElementById("reviewBox").innerHTML=`
-  <div class="review-name">${r.name}</div>
-  <div class="review-country">${r.country}</div>
-  <div class="stars">★★★★★</div>
+ document.getElementById("reviewBox").innerHTML=` 
+  <div class="review-name">${r.name}</div> 
+  <div class="review-country">${r.country}</div> 
+  <div class="stars">★★★★★</div> 
   <div class="review-text">${r.text}</div>`;
  i=(i+1)%reviews.length;
 }
