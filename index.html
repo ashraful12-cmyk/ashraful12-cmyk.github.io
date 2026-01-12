@@ -15,6 +15,7 @@ body {
   color: #fff;
 }
 
+/* HEADER */
 header {
   padding: 70px 20px;
   text-align: center;
@@ -32,6 +33,7 @@ header p {
   font-size: 18px;
 }
 
+/* SECTIONS */
 section {
   max-width: 1100px;
   margin: auto;
@@ -76,23 +78,44 @@ h2 {
 }
 
 /* FLOATING REVIEWS */
-.testimonial {
+.review-box {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #00e5ff;
-  color: #000;
-  padding: 14px 20px;
-  border-radius: 30px;
+  background: #0f172a;
+  padding: 18px 22px;
+  border-radius: 14px;
+  width: 260px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  animation: fade 6s infinite;
+}
+
+.review-name {
+  color: #00e5ff;
   font-weight: bold;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  animation: fade 4s infinite;
+  font-size: 14px;
+}
+
+.review-country {
+  font-size: 12px;
+  color: #cbd5ff;
+}
+
+.stars {
+  color: gold;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.review-text {
+  font-size: 13px;
+  color: #e5e7ff;
 }
 
 @keyframes fade {
   0% {opacity:0;}
   10% {opacity:1;}
-  90% {opacity:1;}
+  85% {opacity:1;}
   100% {opacity:0;}
 }
 
@@ -109,40 +132,40 @@ footer {
 
 <header>
   <h1>Aegis Cybersecurity</h1>
-  <p>Global Offensive Security • 13+ Projects Completed Worldwide</p>
+  <p>Offensive Security • Penetration Testing • Cloud & Web Security</p>
+  <p><strong>13+ Projects • USA • Australia</strong></p>
 </header>
 
 <section class="card">
 <h2>Who We Are</h2>
 <p>
-Aegis Cybersecurity delivers professional penetration testing, vulnerability
-assessments, and real-world security analysis for global clients.
+We provide real-world offensive security testing.  
+No fake scans. No automation-only reports.  
+Human-driven penetration testing for real businesses.
 </p>
 </section>
 
 <section class="card">
-<h2>My Work</h2>
-<p>Only real work uploaded by owner. No fake demos.</p>
+<h2>My Work (Live Proof)</h2>
+<p>Only real files uploaded by owner. Nothing fake.</p>
 
 <div class="work-grid">
 
-<!-- IMAGE 1 -->
 <div class="work-item">
-  <img src="my-work/1729048982687.png" alt="Security Assessment">
+  <img src="my-work/1729048982687.png" alt="Security Assessment Evidence">
   <p>Web Application Vulnerability Assessment</p>
 </div>
 
-<!-- IMAGE 2 -->
 <div class="work-item">
-  <img src="my-work/1729049310512.png" alt="Security Work">
-  <p>Security Testing Evidence / Report Snapshot</p>
+  <img src="my-work/1729049310512.png" alt="Security Report Evidence">
+  <p>Penetration Testing Evidence Snapshot</p>
 </div>
 
 </div>
 
 <p style="margin-top:15px;font-size:13px;">
-✔ Upload new images to <b>my-work/</b>  
-✔ Copy one work-item block to add more
+✔ Upload images to <b>/my-work/</b><br>
+✔ Manually add one more block when needed
 </p>
 </section>
 
@@ -156,20 +179,37 @@ assessments, and real-world security analysis for global clients.
 © 2026 Aegis Cybersecurity — Global Offensive Security
 </footer>
 
-<div class="testimonial" id="review"></div>
+<!-- FLOATING REVIEWS -->
+<div class="review-box" id="reviewBox"></div>
 
 <script>
 const reviews = [
-  "🇺🇸 USA Client: Professional and accurate testing",
-  "🇬🇧 UK Client: Critical issues identified",
-  "🌍 Global Clients: 13+ successful projects delivered"
+  {
+    name: "Michael R.",
+    country: "USA",
+    text: "Excellent penetration testing. Clear report and real findings."
+  },
+  {
+    name: "Daniel S.",
+    country: "Australia",
+    text: "Very professional security assessment. Highly recommended."
+  }
 ];
 
 let i = 0;
-setInterval(() => {
-  document.getElementById("review").innerText = reviews[i];
+function showReview() {
+  const r = reviews[i];
+  document.getElementById("reviewBox").innerHTML = `
+    <div class="review-name">${r.name}</div>
+    <div class="review-country">${r.country}</div>
+    <div class="stars">★★★★★</div>
+    <div class="review-text">${r.text}</div>
+  `;
   i = (i + 1) % reviews.length;
-}, 4000);
+}
+
+showReview();
+setInterval(showReview, 6000);
 </script>
 
 </body>
