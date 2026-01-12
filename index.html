@@ -7,108 +7,100 @@
 
 <style>
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(180deg,#060b1a,#0b1220);
+  background: linear-gradient(180deg,#050b18,#0b1220);
   color: #fff;
 }
 
-/* HEADER */
 header {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
-  background: radial-gradient(circle,#0f1c3f,#060b1a);
+  background: radial-gradient(circle,#0f1c3f,#050b18);
 }
+
 header h1 {
-  margin: 0;
-  font-size: 42px;
+  font-size: 44px;
   color: #00e5ff;
+  margin: 0;
 }
+
 header p {
-  margin-top: 10px;
-  color: #cfd8ff;
-  font-size: 16px;
+  color: #cbd5ff;
+  font-size: 18px;
 }
 
-/* STATS */
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 30px;
-  background: #0a1430;
-}
-.stat-box {
-  text-align: center;
-}
-.stat-box h2 {
-  color: #00e5ff;
-  font-size: 36px;
-  margin: 0;
-}
-.stat-box span {
-  font-size: 14px;
-  color: #aaa;
-}
-
-/* SECTION */
 section {
   max-width: 1100px;
   margin: auto;
   padding: 50px 20px;
 }
+
 .card {
-  background: #0f1b3a;
-  border-radius: 12px;
-  padding: 25px;
+  background: #111b34;
+  padding: 30px;
+  border-radius: 14px;
   margin-bottom: 30px;
-  box-shadow: 0 0 25px rgba(0,229,255,.05);
-}
-h2 {
-  color: #00e5ff;
-  margin-top: 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* WORK GALLERY */
+h2 {
+  color: #00e5ff;
+}
+
+/* MY WORK */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap: 20px;
 }
-.work-grid img, .work-grid video {
-  width: 100%;
-  border-radius: 10px;
-  background: #000;
+
+.work-item {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
 }
 
-/* TESTIMONIAL FLOAT */
-#testimonial {
+.work-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.work-item p {
+  margin-top: 10px;
+  color: #cbd5ff;
+  font-size: 14px;
+}
+
+/* FLOATING REVIEWS */
+.testimonial {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #0f1b3a;
-  padding: 18px 22px;
-  border-radius: 14px;
-  max-width: 320px;
-  box-shadow: 0 0 25px rgba(0,229,255,.3);
-  font-size: 14px;
+  background: #00e5ff;
+  color: #000;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   animation: fade 4s infinite;
 }
+
 @keyframes fade {
-  0%{opacity:0}
-  15%{opacity:1}
-  85%{opacity:1}
-  100%{opacity:0}
+  0% {opacity:0;}
+  10% {opacity:1;}
+  90% {opacity:1;}
+  100% {opacity:0;}
 }
 
-/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
-  background: #060b1a;
-  font-size: 13px;
-  color: #aaa;
+  padding: 20px;
+  background: #0f1c3f;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -117,80 +109,65 @@ footer {
 
 <header>
   <h1>Aegis Cybersecurity</h1>
-  <p>Offensive Security • Penetration Testing • Cloud & Web Security</p>
+  <p>Global Offensive Security • 13+ Projects Completed Worldwide</p>
 </header>
 
-<div class="stats">
-  <div class="stat-box">
-    <h2>13+</h2>
-    <span>Projects Completed</span>
-  </div>
-  <div class="stat-box">
-    <h2>USA • UK</h2>
-    <span>Global Clients</span>
-  </div>
-</div>
-
-<section>
-
-<div class="card">
+<section class="card">
 <h2>Who We Are</h2>
 <p>
-We provide real-world offensive security testing for startups and businesses.
-No fake scans. No automation-only reports. Human-driven security analysis.
+Aegis Cybersecurity delivers professional penetration testing, vulnerability
+assessments, and real-world security analysis for global clients.
 </p>
-</div>
+</section>
 
-<div class="card">
-<h2>Services</h2>
-<ul>
-<li>Vulnerability Assessment & Penetration Testing</li>
-<li>Web Application Security Testing</li>
-<li>Cloud Security Review (AWS / Azure)</li>
-<li>Internal Network & Lab Assessments</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>My Work (Live Proof)</h2>
-<p>Below content updates automatically when you upload files into <b>/my-work/</b></p>
+<section class="card">
+<h2>My Work</h2>
+<p>Only real work uploaded by owner. No fake demos.</p>
 
 <div class="work-grid">
-  <!-- IMAGES -->
-  <img src="my-work/work1.jpg" alt="Work Image">
-  <img src="my-work/work2.png" alt="Work Image">
 
-  <!-- VIDEO -->
-  <video src="my-work/demo1.mp4" controls></video>
-</div>
+<!-- IMAGE 1 -->
+<div class="work-item">
+  <img src="my-work/1729048982687.png" alt="Security Assessment">
+  <p>Web Application Vulnerability Assessment</p>
 </div>
 
-<div class="card">
+<!-- IMAGE 2 -->
+<div class="work-item">
+  <img src="my-work/1729049310512.png" alt="Security Work">
+  <p>Security Testing Evidence / Report Snapshot</p>
+</div>
+
+</div>
+
+<p style="margin-top:15px;font-size:13px;">
+✔ Upload new images to <b>my-work/</b>  
+✔ Copy one work-item block to add more
+</p>
+</section>
+
+<section class="card">
 <h2>Contact</h2>
 <p>Email: security@yourdomain.com</p>
 <p>GitHub: https://github.com/ashraful12-cmyk</p>
-</div>
-
 </section>
 
 <footer>
 © 2026 Aegis Cybersecurity — Global Offensive Security
 </footer>
 
-<!-- FLOATING TESTIMONIAL -->
-<div id="testimonial"></div>
+<div class="testimonial" id="review"></div>
 
 <script>
 const reviews = [
-  "🇺🇸 USA Client: Excellent penetration testing. Very professional.",
-  "🇬🇧 UK Client: Found critical issues others missed.",
-  "🇺🇸 USA Client: Clean report & fast delivery.",
-  "🇬🇧 UK Client: Highly skilled security expert."
+  "🇺🇸 USA Client: Professional and accurate testing",
+  "🇬🇧 UK Client: Critical issues identified",
+  "🌍 Global Clients: 13+ successful projects delivered"
 ];
 
 let i = 0;
 setInterval(() => {
-  document.getElementById("testimonial").innerText = reviews[i];
+  document.getElementById("review").innerText = reviews[i];
   i = (i + 1) % reviews.length;
 }, 4000);
 </script>
