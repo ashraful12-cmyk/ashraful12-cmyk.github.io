@@ -6,124 +6,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(180deg,#050b18,#0b1220);
-  color: #fff;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:linear-gradient(180deg,#050b18,#0b1220);
+  color:#fff;
 }
 
 /* HEADER */
-header {
-  padding: 70px 20px;
-  text-align: center;
-  background: radial-gradient(circle,#0f1c3f,#050b18);
+header{
+  padding:80px 20px;
+  text-align:center;
+  background:radial-gradient(circle,#0f1c3f,#050b18);
+}
+header h1{
+  font-size:46px;
+  color:#00e5ff;
+  margin:0;
+}
+header p{
+  color:#cbd5ff;
+  font-size:18px;
 }
 
-header h1 {
-  font-size: 44px;
-  color: #00e5ff;
-  margin: 0;
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  padding:40px 20px;
+  background:#0b1733;
 }
-
-header p {
-  color: #cbd5ff;
-  font-size: 18px;
+.stat{
+  text-align:center;
+}
+.stat h3{
+  color:#00e5ff;
+  font-size:34px;
+  margin:0;
+}
+.stat p{
+  color:#cbd5ff;
+  font-size:14px;
 }
 
 /* SECTIONS */
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 50px 20px;
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+}
+.card{
+  background:#111b34;
+  padding:32px;
+  border-radius:16px;
+  margin-bottom:30px;
+  box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+h2{color:#00e5ff}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+.service{
+  background:#0f172a;
+  padding:26px;
+  border-radius:14px;
+}
+.service h3{
+  color:#00e5ff;
+  margin-top:0;
+}
+.service p{
+  color:#cbd5ff;
+  font-size:14px;
 }
 
-.card {
-  background: #111b34;
-  padding: 30px;
-  border-radius: 14px;
-  margin-bottom: 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+/* WORK */
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
 }
-
-h2 {
-  color: #00e5ff;
+.work-item{
+  background:#0f172a;
+  padding:16px;
+  border-radius:14px;
 }
-
-/* MY WORK */
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap: 20px;
+.work-item img{
+  width:100%;
+  border-radius:12px;
 }
-
-.work-item {
-  background: #0f172a;
-  padding: 15px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.work-item img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.work-item p {
-  margin-top: 10px;
-  color: #cbd5ff;
-  font-size: 14px;
+.work-item p{
+  color:#cbd5ff;
+  font-size:14px;
+  margin-top:10px;
 }
 
 /* FLOATING REVIEWS */
-.review-box {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #0f172a;
-  padding: 18px 22px;
-  border-radius: 14px;
-  width: 260px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  animation: fade 6s infinite;
+.review{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:280px;
+  background:#0f172a;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+  animation:fade 7s infinite;
+}
+.avatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#00e5ff;
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+.name{color:#00e5ff;font-weight:bold;font-size:14px}
+.country{color:#cbd5ff;font-size:12px}
+.stars{color:gold;font-size:14px;margin:6px 0}
+.text{font-size:13px;color:#e5e7ff}
+
+@keyframes fade{
+  0%{opacity:0}
+  10%{opacity:1}
+  85%{opacity:1}
+  100%{opacity:0}
 }
 
-.review-name {
-  color: #00e5ff;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.review-country {
-  font-size: 12px;
-  color: #cbd5ff;
-}
-
-.stars {
-  color: gold;
-  font-size: 14px;
-  margin: 4px 0;
-}
-
-.review-text {
-  font-size: 13px;
-  color: #e5e7ff;
-}
-
-@keyframes fade {
-  0% {opacity:0;}
-  10% {opacity:1;}
-  85% {opacity:1;}
-  100% {opacity:0;}
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0f1c3f;
-  font-size: 14px;
+footer{
+  text-align:center;
+  padding:22px;
+  background:#0f1c3f;
+  font-size:14px;
 }
 </style>
 </head>
@@ -133,39 +157,71 @@ footer {
 <header>
   <h1>Aegis Cybersecurity</h1>
   <p>Offensive Security • Penetration Testing • Cloud & Web Security</p>
-  <p><strong>13+ Projects • USA • Australia</strong></p>
 </header>
+
+<div class="stats">
+  <div class="stat">
+    <h3>13+</h3>
+    <p>Client Projects Completed</p>
+  </div>
+  <div class="stat">
+    <h3>USA • UK • AU • DE</h3>
+    <p>Global Clients</p>
+  </div>
+</div>
 
 <section class="card">
 <h2>Who We Are</h2>
 <p>
-We provide real-world offensive security testing.  
-No fake scans. No automation-only reports.  
-Human-driven penetration testing for real businesses.
+We provide real-world vulnerability assessment and penetration testing for
+startups and businesses globally. Human-driven testing, real findings,
+clear reports — no automated nonsense.
 </p>
 </section>
 
 <section class="card">
-<h2>My Work (Live Proof)</h2>
-<p>Only real files uploaded by owner. Nothing fake.</p>
+<h2>Services</h2>
+<div class="services">
+  <div class="service">
+    <h3>Vulnerability Assessment</h3>
+    <p>Manual & automated vulnerability discovery with real impact analysis.</p>
+  </div>
+  <div class="service">
+    <h3>Penetration Testing</h3>
+    <p>Exploitation-based testing for web apps, APIs, and infrastructure.</p>
+  </div>
+  <div class="service">
+    <h3>Cloud Security</h3>
+    <p>AWS & Azure security review, misconfiguration & access control testing.</p>
+  </div>
+  <div class="service">
+    <h3>Internal Network Testing</h3>
+    <p>Active Directory attacks, lateral movement, privilege escalation.</p>
+  </div>
+</div>
+</section>
+
+<section class="card">
+<h2>My Work – Vulnerability Assessment Evidence</h2>
 
 <div class="work-grid">
 
+<!-- REAL IMAGE 1 -->
 <div class="work-item">
-  <img src="my-work/1729048982687.png" alt="Security Assessment Evidence">
+  <img src="my-work/1729048982687.png" alt="Vulnerability Assessment">
   <p>Web Application Vulnerability Assessment</p>
 </div>
 
+<!-- REAL IMAGE 2 -->
 <div class="work-item">
-  <img src="my-work/1729049310512.png" alt="Security Report Evidence">
+  <img src="my-work/1729049310512.png" alt="Penetration Testing Evidence">
   <p>Penetration Testing Evidence Snapshot</p>
 </div>
 
 </div>
 
-<p style="margin-top:15px;font-size:13px;">
-✔ Upload images to <b>/my-work/</b><br>
-✔ Manually add one more block when needed
+<p style="font-size:13px;color:#cbd5ff;margin-top:14px">
+To add new work later: upload image to <b>/my-work/</b> and duplicate one block above.
 </p>
 </section>
 
@@ -180,36 +236,27 @@ Human-driven penetration testing for real businesses.
 </footer>
 
 <!-- FLOATING REVIEWS -->
-<div class="review-box" id="reviewBox"></div>
+<div class="review" id="review"></div>
 
 <script>
-const reviews = [
-  {
-    name: "Michael R.",
-    country: "USA",
-    text: "Excellent penetration testing. Clear report and real findings."
-  },
-  {
-    name: "Daniel S.",
-    country: "Australia",
-    text: "Very professional security assessment. Highly recommended."
-  }
+const reviews=[
+ {name:"John M.",country:"USA",text:"Clear vulnerability findings with real impact. Very professional."},
+ {name:"Liam T.",country:"Australia",text:"Excellent penetration testing and clean reporting."},
+ {name:"Markus K.",country:"Germany",text:"Strong technical depth and honest assessment."}
 ];
-
-let i = 0;
-function showReview() {
-  const r = reviews[i];
-  document.getElementById("reviewBox").innerHTML = `
-    <div class="review-name">${r.name}</div>
-    <div class="review-country">${r.country}</div>
-    <div class="stars">★★★★★</div>
-    <div class="review-text">${r.text}</div>
-  `;
-  i = (i + 1) % reviews.length;
+let i=0;
+function showReview(){
+ const r=reviews[i];
+ document.getElementById("review").innerHTML=`
+  <div class="avatar">${r.name[0]}</div>
+  <div class="name">${r.name}</div>
+  <div class="country">${r.country}</div>
+  <div class="stars">★★★★★</div>
+  <div class="text">${r.text}</div>`;
+ i=(i+1)%reviews.length;
 }
-
 showReview();
-setInterval(showReview, 6000);
+setInterval(showReview,7000);
 </script>
 
 </body>
