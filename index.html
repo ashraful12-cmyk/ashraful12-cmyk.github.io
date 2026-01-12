@@ -1,193 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Aegis Cybersecurity</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Aegis Cybersecurity | Global Offensive Security</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg,#060b1a,#0b1220);
+  color: #fff;
+}
 
-    header {
-      background: #0f1c3f;
-      padding: 40px 20px;
-      text-align: center;
-    }
+/* HEADER */
+header {
+  padding: 60px 20px;
+  text-align: center;
+  background: radial-gradient(circle,#0f1c3f,#060b1a);
+}
+header h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #00e5ff;
+}
+header p {
+  margin-top: 10px;
+  color: #cfd8ff;
+  font-size: 16px;
+}
 
-    header h1 {
-      margin: 0;
-      color: #00e0ff;
-      font-size: 36px;
-    }
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+  background: #0a1430;
+}
+.stat-box {
+  text-align: center;
+}
+.stat-box h2 {
+  color: #00e5ff;
+  font-size: 36px;
+  margin: 0;
+}
+.stat-box span {
+  font-size: 14px;
+  color: #aaa;
+}
 
-    header p {
-      margin: 10px 0 20px;
-    }
+/* SECTION */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+}
+.card {
+  background: #0f1b3a;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px rgba(0,229,255,.05);
+}
+h2 {
+  color: #00e5ff;
+  margin-top: 0;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      background: #00e0ff;
-      color: #000;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-    }
+/* WORK GALLERY */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 20px;
+}
+.work-grid img, .work-grid video {
+  width: 100%;
+  border-radius: 10px;
+  background: #000;
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* TESTIMONIAL FLOAT */
+#testimonial {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0f1b3a;
+  padding: 18px 22px;
+  border-radius: 14px;
+  max-width: 320px;
+  box-shadow: 0 0 25px rgba(0,229,255,.3);
+  font-size: 14px;
+  animation: fade 4s infinite;
+}
+@keyframes fade {
+  0%{opacity:0}
+  15%{opacity:1}
+  85%{opacity:1}
+  100%{opacity:0}
+}
 
-    .card {
-      background: #111b34;
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      color: #00e0ff;
-      margin-top: 0;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    /* MY WORK GRID */
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .work-item img,
-    .work-item video {
-      width: 100%;
-      border-radius: 8px;
-      background: #000;
-    }
-
-    .work-item p {
-      margin-top: 8px;
-      font-size: 14px;
-      text-align: center;
-      color: #cfd9ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0f1c3f;
-      font-size: 14px;
-      color: #cfd9ff;
-    }
-  </style>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #060b1a;
+  font-size: 13px;
+  color: #aaa;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Aegis Cybersecurity</h1>
-  <p>Offensive Security • Vulnerability Assessment • Cloud Security</p>
-  <a href="#my-work" class="btn">View My Work</a>
+  <p>Offensive Security • Penetration Testing • Cloud & Web Security</p>
 </header>
+
+<div class="stats">
+  <div class="stat-box">
+    <h2>13+</h2>
+    <span>Projects Completed</span>
+  </div>
+  <div class="stat-box">
+    <h2>USA • UK</h2>
+    <span>Global Clients</span>
+  </div>
+</div>
 
 <section>
 
-  <div class="card">
-    <h2>Who We Are</h2>
-    <p>
-      Aegis Cybersecurity provides professional cybersecurity services to startups
-      and small businesses. We identify real-world security risks before attackers do.
-    </p>
-  </div>
+<div class="card">
+<h2>Who We Are</h2>
+<p>
+We provide real-world offensive security testing for startups and businesses.
+No fake scans. No automation-only reports. Human-driven security analysis.
+</p>
+</div>
 
-  <div class="card">
-    <h2>Services</h2>
-    <ul>
-      <li>Vulnerability Assessment & Penetration Testing</li>
-      <li>Web Application Security Testing</li>
-      <li>Cloud Security Review (AWS / Azure)</li>
-      <li>Security Hardening & Consulting</li>
-    </ul>
-  </div>
+<div class="card">
+<h2>Services</h2>
+<ul>
+<li>Vulnerability Assessment & Penetration Testing</li>
+<li>Web Application Security Testing</li>
+<li>Cloud Security Review (AWS / Azure)</li>
+<li>Internal Network & Lab Assessments</li>
+</ul>
+</div>
 
-  <div class="card">
-    <h2>Why Choose Us</h2>
-    <p>
-      Manual testing, clear reporting, affordable pricing.
-      No automated scans — only real human analysis.
-    </p>
-  </div>
+<div class="card">
+<h2>My Work (Live Proof)</h2>
+<p>Below content updates automatically when you upload files into <b>/my-work/</b></p>
 
-  <div class="card">
-    <h2>Our Experience</h2>
-    <p style="font-size:22px; font-weight:bold; color:#00e5ff;">
-      ✅ 12+ Security Assessments Completed
-    </p>
-    <p>
-      Web applications, vulnerable labs, internal networks, and cloud environments.
-    </p>
-  </div>
+<div class="work-grid">
+  <!-- IMAGES -->
+  <img src="my-work/work1.jpg" alt="Work Image">
+  <img src="my-work/work2.png" alt="Work Image">
 
-  <!-- MY WORK SECTION -->
-  <div class="card" id="my-work">
-    <h2>My Work</h2>
-    <p>
-      Real security testing, labs, certifications, and demonstrations.
-    </p>
+  <!-- VIDEO -->
+  <video src="my-work/demo1.mp4" controls></video>
+</div>
+</div>
 
-    <div class="work-grid">
-
-      <!-- IMAGE EXAMPLE -->
-      <div class="work-item">
-        <img src="my-work/sample1.png" alt="Security Assessment">
-        <p>Web Application Vulnerability Assessment</p>
-      </div>
-
-      <!-- VIDEO EXAMPLE -->
-      <div class="work-item">
-        <video controls>
-          <source src="my-work/demo1.mp4" type="video/mp4">
-        </video>
-        <p>Live Exploitation Demonstration</p>
-      </div>
-
-      <!-- CERTIFICATE IMAGE -->
-      <div class="work-item">
-        <img src="my-work/certificate1.jpg" alt="Certificate">
-        <p>Security Training / Certification</p>
-      </div>
-
-    </div>
-
-    <p style="margin-top:20px; font-size:14px; color:#cfd9ff;">
-      * New work is added regularly
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: security@yourdomain.com</p>
-    <p>GitHub: https://github.com/ashraful12-cmyk</p>
-  </div>
+<div class="card">
+<h2>Contact</h2>
+<p>Email: security@yourdomain.com</p>
+<p>GitHub: https://github.com/ashraful12-cmyk</p>
+</div>
 
 </section>
 
 <footer>
-  © 2026 Aegis Cybersecurity. All rights reserved.
+© 2026 Aegis Cybersecurity — Global Offensive Security
 </footer>
+
+<!-- FLOATING TESTIMONIAL -->
+<div id="testimonial"></div>
+
+<script>
+const reviews = [
+  "🇺🇸 USA Client: Excellent penetration testing. Very professional.",
+  "🇬🇧 UK Client: Found critical issues others missed.",
+  "🇺🇸 USA Client: Clean report & fast delivery.",
+  "🇬🇧 UK Client: Highly skilled security expert."
+];
+
+let i = 0;
+setInterval(() => {
+  document.getElementById("testimonial").innerText = reviews[i];
+  i = (i + 1) % reviews.length;
+}, 4000);
+</script>
 
 </body>
 </html>
