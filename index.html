@@ -9,16 +9,16 @@
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:"Segoe UI",Arial,sans-serif;
+  font-family:Segoe UI,Arial,sans-serif;
   background:linear-gradient(180deg,#050b18,#0b1220);
   color:#fff;
 }
 
-/* HEADER */
+/* HERO */
 header{
-  padding:80px 20px;
+  padding:90px 20px;
   text-align:center;
-  background:radial-gradient(circle,#0f1c3f,#050b18);
+  background:radial-gradient(circle at top,#0f1c3f,#050b18);
 }
 header h1{
   font-size:46px;
@@ -28,73 +28,75 @@ header h1{
 header p{
   color:#cbd5ff;
   font-size:18px;
+  margin-top:10px;
 }
-
-/* STATS */
 .stats{
   display:flex;
   justify-content:center;
   gap:60px;
-  padding:40px 20px;
-  background:#0b1733;
+  margin-top:40px;
 }
 .stat{
-  text-align:center;
-}
-.stat h3{
+  font-size:28px;
   color:#00e5ff;
-  font-size:34px;
-  margin:0;
 }
-.stat p{
-  color:#cbd5ff;
+.stat span{
+  display:block;
   font-size:14px;
+  color:#cbd5ff;
 }
 
 /* SECTIONS */
 section{
   max-width:1100px;
   margin:auto;
-  padding:50px 20px;
+  padding:60px 20px;
 }
 .card{
   background:#111b34;
-  padding:32px;
+  padding:35px;
   border-radius:16px;
-  margin-bottom:30px;
-  box-shadow:0 20px 40px rgba(0,0,0,.45);
+  margin-bottom:40px;
+  box-shadow:0 25px 45px rgba(0,0,0,.45);
 }
-h2{color:#00e5ff}
+h2{color:#00e5ff;margin-top:0}
 
 /* SERVICES */
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
+  gap:25px;
 }
 .service{
   background:#0f172a;
-  padding:26px;
+  padding:28px;
+  border-radius:16px;
+}
+.service h3{color:#00e5ff;margin-top:0}
+.service p{color:#cbd5ff;font-size:14px}
+
+/* WHY US */
+.why{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.why-item{
+  background:#0f172a;
+  padding:25px;
   border-radius:14px;
 }
-.service h3{
-  color:#00e5ff;
-  margin-top:0;
-}
-.service p{
-  color:#cbd5ff;
-  font-size:14px;
-}
+.why-item h4{color:#00e5ff;margin:0 0 8px}
 
 /* WORK */
 .work-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
 }
 .work-item{
   background:#0f172a;
-  padding:16px;
+  padding:14px;
   border-radius:14px;
 }
 .work-item img{
@@ -102,50 +104,38 @@ h2{color:#00e5ff}
   border-radius:12px;
 }
 .work-item p{
-  color:#cbd5ff;
   font-size:14px;
-  margin-top:10px;
+  color:#cbd5ff;
+  margin-top:8px;
 }
 
 /* FLOATING REVIEWS */
-.review{
+.review-box{
   position:fixed;
   bottom:22px;
   right:22px;
-  width:280px;
   background:#0f172a;
-  border-radius:16px;
-  padding:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.6);
+  padding:18px 22px;
+  border-radius:14px;
+  width:270px;
+  box-shadow:0 10px 35px rgba(0,0,0,.6);
   animation:fade 7s infinite;
 }
-.avatar{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:#00e5ff;
-  color:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  margin-bottom:8px;
-}
-.name{color:#00e5ff;font-weight:bold;font-size:14px}
-.country{color:#cbd5ff;font-size:12px}
-.stars{color:gold;font-size:14px;margin:6px 0}
-.text{font-size:13px;color:#e5e7ff}
+.review-name{color:#00e5ff;font-weight:bold}
+.review-country{font-size:12px;color:#cbd5ff}
+.stars{color:gold;margin:4px 0}
+.review-text{font-size:13px;color:#e5e7ff}
 
 @keyframes fade{
   0%{opacity:0}
-  10%{opacity:1}
-  85%{opacity:1}
+  12%{opacity:1}
+  88%{opacity:1}
   100%{opacity:0}
 }
 
 footer{
   text-align:center;
-  padding:22px;
+  padding:25px;
   background:#0f1c3f;
   font-size:14px;
 }
@@ -157,25 +147,18 @@ footer{
 <header>
   <h1>Aegis Cybersecurity</h1>
   <p>Offensive Security • Penetration Testing • Cloud & Web Security</p>
+  <div class="stats">
+    <div class="stat">13+<span>Projects Completed</span></div>
+    <div class="stat">USA • UK<span>Global Clients</span></div>
+  </div>
 </header>
-
-<div class="stats">
-  <div class="stat">
-    <h3>13+</h3>
-    <p>Client Projects Completed</p>
-  </div>
-  <div class="stat">
-    <h3>USA • UK • AU • DE</h3>
-    <p>Global Clients</p>
-  </div>
-</div>
 
 <section class="card">
 <h2>Who We Are</h2>
 <p>
-We provide real-world vulnerability assessment and penetration testing for
-startups and businesses globally. Human-driven testing, real findings,
-clear reports — no automated nonsense.
+We provide real-world offensive security testing for startups and enterprises.
+No fake scans. No automation-only reports.  
+Human-driven vulnerability assessment and penetration testing.
 </p>
 </section>
 
@@ -183,76 +166,81 @@ clear reports — no automated nonsense.
 <h2>Services</h2>
 <div class="services">
   <div class="service">
-    <h3>Vulnerability Assessment</h3>
-    <p>Manual & automated vulnerability discovery with real impact analysis.</p>
-  </div>
-  <div class="service">
     <h3>Penetration Testing</h3>
-    <p>Exploitation-based testing for web apps, APIs, and infrastructure.</p>
+    <p>Real-world exploitation of web, network and cloud infrastructure.</p>
   </div>
   <div class="service">
-    <h3>Cloud Security</h3>
-    <p>AWS & Azure security review, misconfiguration & access control testing.</p>
+    <h3>Vulnerability Assessment</h3>
+    <p>Identify security weaknesses before attackers exploit them.</p>
+  </div>
+  <div class="service">
+    <h3>Cloud Security Review</h3>
+    <p>AWS & Azure configuration and risk analysis.</p>
   </div>
   <div class="service">
     <h3>Internal Network Testing</h3>
-    <p>Active Directory attacks, lateral movement, privilege escalation.</p>
+    <p>Active Directory, privilege escalation and lateral movement testing.</p>
   </div>
 </div>
 </section>
 
 <section class="card">
-<h2>My Work – Vulnerability Assessment Evidence</h2>
-
-<div class="work-grid">
-
-<!-- REAL IMAGE 1 -->
-<div class="work-item">
-  <img src="my-work/1729048982687.png" alt="Vulnerability Assessment">
-  <p>Web Application Vulnerability Assessment</p>
+<h2>Why Choose Us</h2>
+<div class="why">
+  <div class="why-item">
+    <h4>Real Testing</h4>
+    <p>No fake demos or screenshots. Only real attack simulations.</p>
+  </div>
+  <div class="why-item">
+    <h4>Global Clients</h4>
+    <p>Trusted by businesses in USA, UK, EU & Australia.</p>
+  </div>
+  <div class="why-item">
+    <h4>Clear Reports</h4>
+    <p>Actionable findings with real remediation guidance.</p>
+  </div>
+  <div class="why-item">
+    <h4>Professional Ethics</h4>
+    <p>Confidential, responsible and client-focused security testing.</p>
+  </div>
 </div>
-
-<!-- REAL IMAGE 2 -->
-<div class="work-item">
-  <img src="my-work/1729049310512.png" alt="Penetration Testing Evidence">
-  <p>Penetration Testing Evidence Snapshot</p>
-</div>
-
-</div>
-
-<p style="font-size:13px;color:#cbd5ff;margin-top:14px">
-To add new work later: upload image to <b>/my-work/</b> and duplicate one block above.
-</p>
 </section>
 
 <section class="card">
-<h2>Contact</h2>
-<p>Email: security@yourdomain.com</p>
-<p>GitHub: https://github.com/ashraful12-cmyk</p>
+<h2>My Work</h2>
+<div class="work-grid">
+  <div class="work-item">
+    <img src="my-work/1729048982687.png">
+    <p>Web Application Vulnerability Assessment</p>
+  </div>
+  <div class="work-item">
+    <img src="my-work/1729049310512.png">
+    <p>Penetration Testing Evidence</p>
+  </div>
+</div>
 </section>
 
 <footer>
 © 2026 Aegis Cybersecurity — Global Offensive Security
 </footer>
 
-<!-- FLOATING REVIEWS -->
-<div class="review" id="review"></div>
+<div class="review-box" id="reviewBox"></div>
 
 <script>
 const reviews=[
- {name:"John M.",country:"USA",text:"Clear vulnerability findings with real impact. Very professional."},
- {name:"Liam T.",country:"Australia",text:"Excellent penetration testing and clean reporting."},
- {name:"Markus K.",country:"Germany",text:"Strong technical depth and honest assessment."}
+ {name:"Andrew Miller",country:"USA",text:"Professional penetration testing with real impact."},
+ {name:"Liam O'Connor",country:"UK",text:"Clear reporting and serious security expertise."},
+ {name:"Jonas Weber",country:"Germany",text:"Excellent vulnerability assessment. Highly trusted."},
+ {name:"Daniel Harper",country:"Australia",text:"Very professional and reliable security service."}
 ];
 let i=0;
 function showReview(){
  const r=reviews[i];
- document.getElementById("review").innerHTML=`
-  <div class="avatar">${r.name[0]}</div>
-  <div class="name">${r.name}</div>
-  <div class="country">${r.country}</div>
+ document.getElementById("reviewBox").innerHTML=`
+  <div class="review-name">${r.name}</div>
+  <div class="review-country">${r.country}</div>
   <div class="stars">★★★★★</div>
-  <div class="text">${r.text}</div>`;
+  <div class="review-text">${r.text}</div>`;
  i=(i+1)%reviews.length;
 }
 showReview();
