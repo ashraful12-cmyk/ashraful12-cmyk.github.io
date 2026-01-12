@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Aegis Cybersecurity</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,49 +12,104 @@
       color: #ffffff;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
+
     header {
       background: #0f1c3f;
-      padding: 30px;
+      padding: 40px 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       color: #00e0ff;
+      font-size: 36px;
     }
+
+    header p {
+      margin: 10px 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #00e0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
     section {
-      padding: 40px;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
     }
+
     .card {
       background: #111b34;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 25px;
     }
+
+    h2 {
+      color: #00e0ff;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* MY WORK GRID */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .work-item img,
+    .work-item video {
+      width: 100%;
+      border-radius: 8px;
+      background: #000;
+    }
+
+    .work-item p {
+      margin-top: 8px;
+      font-size: 14px;
+      text-align: center;
+      color: #cfd9ff;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       background: #0f1c3f;
       font-size: 14px;
+      color: #cfd9ff;
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Aegis Cybersecurity</h1>
   <p>Offensive Security • Vulnerability Assessment • Cloud Security</p>
+  <a href="#my-work" class="btn">View My Work</a>
 </header>
 
 <section>
+
   <div class="card">
     <h2>Who We Are</h2>
     <p>
       Aegis Cybersecurity provides professional cybersecurity services to startups
-      and small businesses. We focus on identifying real-world security risks
-      before attackers do.
+      and small businesses. We identify real-world security risks before attackers do.
     </p>
   </div>
 
@@ -70,8 +126,54 @@
   <div class="card">
     <h2>Why Choose Us</h2>
     <p>
-      Practical security testing, clear reporting, and affordable pricing.
-      No automated scans only — real human analysis.
+      Manual testing, clear reporting, affordable pricing.
+      No automated scans — only real human analysis.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Our Experience</h2>
+    <p style="font-size:22px; font-weight:bold; color:#00e5ff;">
+      ✅ 12+ Security Assessments Completed
+    </p>
+    <p>
+      Web applications, vulnerable labs, internal networks, and cloud environments.
+    </p>
+  </div>
+
+  <!-- MY WORK SECTION -->
+  <div class="card" id="my-work">
+    <h2>My Work</h2>
+    <p>
+      Real security testing, labs, certifications, and demonstrations.
+    </p>
+
+    <div class="work-grid">
+
+      <!-- IMAGE EXAMPLE -->
+      <div class="work-item">
+        <img src="my-work/sample1.png" alt="Security Assessment">
+        <p>Web Application Vulnerability Assessment</p>
+      </div>
+
+      <!-- VIDEO EXAMPLE -->
+      <div class="work-item">
+        <video controls>
+          <source src="my-work/demo1.mp4" type="video/mp4">
+        </video>
+        <p>Live Exploitation Demonstration</p>
+      </div>
+
+      <!-- CERTIFICATE IMAGE -->
+      <div class="work-item">
+        <img src="my-work/certificate1.jpg" alt="Certificate">
+        <p>Security Training / Certification</p>
+      </div>
+
+    </div>
+
+    <p style="margin-top:20px; font-size:14px; color:#cfd9ff;">
+      * New work is added regularly
     </p>
   </div>
 
@@ -80,6 +182,7 @@
     <p>Email: security@yourdomain.com</p>
     <p>GitHub: https://github.com/ashraful12-cmyk</p>
   </div>
+
 </section>
 
 <footer>
